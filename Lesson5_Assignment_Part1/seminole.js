@@ -14,7 +14,7 @@ var opponents = ["Lightning", "Combines", "Combines",
                  "Barn Raisers", "Sodbusters", "Sodbusters", "Sodbusters", 
                  "Sodbusters", "(off)", "River Riders", "River Riders", 
                  "River Riders", "Big Dippers", "Big Dippers",
-                 "Big Dippers" "(off)", "Sodbusters", "Sodbusters",
+                 "Big Dippers", "(off)", "Sodbusters", "Sodbusters",
                  "Sodbusters", "Combines", "Combines", "Combines", 
                  "(off)", "(off)"];
 
@@ -60,7 +60,7 @@ function addGameInfo() {
     paragraphs[1].innerHTML += opponents[i];
   
     if (gameLocation[i] === "away") {
-      paragraphs[i].innerHTML = "@ ";
+      paragraphs[1].innerHTML = "@ ";
       paragraphs[1].innerHTML += opponents[i];
       }//end of if
     else if (gameLocation[i] === "home") {
@@ -76,7 +76,7 @@ function addGameInfo() {
 // function to load the calendar content in the calendar when the page loads
 function setUpPage()  {
   addColumnHeaders();
-  addCalenderDates();
+  addCalendarDates();
   addGameInfo();
 }//end of setUpPage function
 
